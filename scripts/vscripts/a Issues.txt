@@ -1,0 +1,151 @@
+Item Issues and TODOs:
+
+TODO:
+-Get Better Item Icon Picture 
+    - Ballista 1 //
+    - Warclub 1 and 4 //
+    - Sim aXe 1 and 3 //
+    - Mask Tho'roth 1, 2, 4 //
+    - Grallen 2, 3
+    - Warlock Skull 2, 3
+    - Oshibo 
+    - Sennor Kris
+    - moo moo tshirt
+
+- Get specifics for mask of Throth 1-5 including duration and active lifesteal percent / any other perks (basic dispel like satanic?)
+    - lasts 6s increases damage by 10/20/30/40/50
+    - 3.9 unholy bible is 50% lifesteal (mask doesnt upgrade it?)
+- Grallen changed hex cooldown / what hex to mimic? 
+-- Get specifics for warlock skull
+
+- Decide about the 4 orbs icons 3.9 or 3.16
+
+- rename certain items to match names of 3.9 (aka warclub 3 is swiss voglue)?
+
+- get moo moo tshirt specs for unleash
+
+-make items:
+    - undead boots (1-5) // done (basic) and 1-5
+    - grallen / mystic grallen // Done and Done
+    - simplicity axe // Done
+    - mask of tho'roth // done
+    - warlock skull // done
+    - prismatic/arcane shield // Done and done
+    - ragnarok // done
+    - avieoletz // done
+    - moo moo t-shirt // Done
+    - book of knowledge // done
+    - kraken's coat // done
+    - blood stone // done
+    - battle gears
+    from 3.9
+    - aerogun 
+    - RA
+    from 4.whatever
+    - exorus warlock
+    - wizard cloak (upgrades sassy's)
+
+- make more waves:
+    - built in waves to 12 
+    - wave 13: spell breaker (silencer, get ms, attack range, attack speed, program galives / silence)
+    - wave 14: thor / rifleman (get numbers, movespeed, attack range and speed)
+
+- make bosses:
+    - omega
+    - immunity 
+    - region bosses 
+    - centaur 
+    - pedro 
+    - blades (juggs, axe, death knight)
+    - warlock 
+    - wandapoo 
+
+
+
+- make heroes:
+    -goal 2 of each type
+        - cannibal // done
+        - boul 
+        - house 
+    
+        - Biohazard // done
+        - dark Ranger
+        - po / sniper / iron raven 
+
+        - vassal 
+        - ghost spirit 
+
+- align all tooltips
+
+- align spells (grey border) and passives (no border)
+
+
+ISSUES:
+
+All items:
+    issue: modifiers for all levels of items the same name so likely wont stack
+    issue: update tooltips to new dota style where alt shows more info on all stats (how?)
+
+ballista: 
+    issue:  only affects base damage not total damage
+    goal:   affects all damage
+    problem: infinite damage loops when getting all damage
+
+    issue: multiple ballista aura stacking (for owners will they get the aura from the other)
+    goal:   cannot be affected by ballista if owned 
+    alernative: allow ballista to stack (aka if you are ranged and have ballista the aura will stack if an allied melee hero has ballista as well) on the basis that it's base damage only
+
+    issue: warclub and ballista do not stack
+    problem: they both call the same modifier so they over-write one another 
+    solution: have different modifers for each
+
+Glory Axe:
+    issue: picking up gold breaks invisibility
+
+All Bashes:
+    issue: how to stack or not stack
+
+Halberd:
+    issue: cannot have an item in recipe and have it not get consumed 
+    goal: use halberd in sadistic axe but still get it back 
+
+    have halberd have 1 charge to "inspect" popping out components used in sadistic axes recipe and keeping halberd
+
+Mithril rod and Trinity
+    issue: cannot change main projectile without overwriting when mith rod upgrades 
+    solved by: MODIFIER_PROPERTY_PROJECTILE_NAME function
+    issue: want to show stacks on trinity for damage done from all stats 
+
+    issue: cannot toggle multishot on and off
+    solution: make two sets of tiems one with and without multishot, use dummy items like radiance does.
+
+Sadistic axe:
+    gold bag invis issue
+    stacks like trinity showing stat damage
+
+Wirts:
+    stacking with other forms of boots
+    solved by: use MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE
+
+    issue: if it won't stack with boots, have boots be in recipe
+    solution: make wirts a recipe / upgrade of boots
+
+Simplicity Axe 1-5
+    issue: Bash does not stack
+    solution: have different modifiers for each level / check Inventory
+    Note: Ragnarok cleave stack with simplicity axe (due to calling a different modifier)
+
+Mask of Tho'roth
+    issue: basic dispel tooltip not correct with rest of dota
+    solution: need to see how dota defines font-weight
+    issue: check particle effects
+
+warlock skull
+    issue: add a ranged particle attack
+
+Krakens coat:
+    issue: return damage becomes armor outside of base --- what is considered base on this map
+
+Vassal:
+    - Get better particles for spells. Rework Conjuration particles 
+    - how to auto cast unlock potential

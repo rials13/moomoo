@@ -1,0 +1,774 @@
+// Dota Heroes File
+// NOTE: This isn't for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: Life Stealer - Cannibal
+	//=================================================================================================================
+	"npc_dota_hero_life_stealer_template"
+	{
+		"override_hero"				"npc_dota_hero_life_stealer"				// Hero to override
+		"ModelScale"				"0.6"
+
+		// Abilities
+		// ------------------------------------------------------------------------------------------------------------
+		//"AbilityLayout"			""
+		"Ability1"					"life_stealer_cannibalize_lua"				// Ability 1
+		"Ability2"					"life_stealer_rend_lua"						// Ability 2
+		"Ability3"					"life_stealer_ghoul_frenzy_lua"				// Ability 3
+		"Ability4"					"generic_hidden"
+		"Ability5"					"generic_hidden"
+		"Ability6"					"life_stealer_mammoth_lua"					// Ability 6
+		"Ability7"					"life_stealer_stench_lua"					// Ability 7
+		"Ability8"                  "attribute_bonus_lua"
+
+		"AbilityTalentStart"		"10" //10
+		"Ability10"					"generic_hidden"
+		"Ability11"					"generic_hidden"
+		"Ability12"					"generic_hidden"
+		"Ability13"					"generic_hidden"
+		"Ability14"					"generic_hidden"
+		"Ability15"					"generic_hidden"
+		"Ability16"					"generic_hidden"
+		"Ability17"					"generic_hidden"
+
+		// Armor
+		// ------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"-1.3"	// 3.0
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"BaseAttackSpeed"			"110"
+		"AttackDamageMin"			"24"									// 39 
+		"AttackDamageMax"			"34"									// 49	
+		"AttackRate"				"1.7"									// Speed of attack. 12.5 seconds for 10 attacks
+		//"AttackAnimationPoint"		//"0.3"									// Normalized time in animation cycle to attack.
+		//"AttackAcquisitionRange"	//"600"									// Range within a target can be acquired.
+		"AttackRange"				"100"									// Range within a target can be attacked.
+		//"ProjectileModel"			""										// Particle system model for projectile.
+		//"ProjectileSpeed"			"0"										// Speed of projectile.
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"15"									// Base strength
+		"AttributeStrengthGain"		"1.4"									// Strength bonus per level. 50: 83
+		"AttributeBaseIntelligence"	"15"									// Base intelligence
+		"AttributeIntelligenceGain"	"1.5"									// Intelligence bonus per level. 50: 88
+		"AttributeBaseAgility"		"26"									// Base agility
+		"AttributeAgilityGain"		"3.0"									// Agility bonus per level. 50: 224
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		//"MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"               "295"       							// Speed
+		//"MovementTurnRate"            "0.5"       							// Turning rate.
+
+
+		// Health and Mana
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"                "135"       							// 435
+		//"StatusHealthRegen"           "0"         							// Health regeneration rate.
+		"StatusMana"                  "60"         							// 240
+		//"StatusManaRegen"             "0"         							// Mana regeneration rate.
+
+
+
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Razor - Biohazard
+	//=================================================================================================================
+	"npc_dota_hero_razor_template"
+	{
+		"override_hero"				"npc_dota_hero_razor"					// Hero to override
+		"Role"						"Carry,Durable,Wave Clear"
+		"Rolelevels"				"2,2,3"
+		"Complexity"				"1"
+
+
+		// Abilities
+		// ------------------------------------------------------------------------------------------------------------
+		//"AbilityLayout"			""
+		"Ability1"					"razor_bryans_breath_lua"				// Ability 1
+		"Ability2"					"razor_jovans_touch_lua"				// Ability 2
+		"Ability3"					"razor_ronels_skin_lua"				// Ability 3
+		"Ability4"					"generic_hidden"
+		"Ability5"					"generic_hidden"
+		"Ability6"					"razor_tiny_treb_lua"					// Ability 6
+		"Ability7"					"razor_troys_strength_lua"					// Ability 7
+		"Ability8"					"attribute_bonus_lua"
+
+		"AbilityTalentStart"		"51" //10
+		"Ability10"					"generic_hidden"
+		"Ability11"					"generic_hidden"
+		"Ability12"					"generic_hidden"
+		"Ability13"					"generic_hidden"
+		"Ability14"					"generic_hidden"
+		"Ability15"					"generic_hidden"
+		"Ability16"					"generic_hidden"
+		"Ability17"					"generic_hidden"
+
+		// Armor
+		// ------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"-1.7"										// 2
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"BaseAttackSpeed"			"84"
+		"AttackDamageMin"			"15"									// 37
+		"AttackDamageMax"			"17"									// 39	
+		"AttackRate"				"1.7"									// Speed of attack. 16 seconds for 10 attacks
+		//"AttackAnimationPoint"		//"0.3"									// Normalized time in animation cycle to attack.
+		//"AttackAcquisitionRange"	//"600"									// Range within a target can be acquired.
+		"AttackRange"				"550"									// Range within a target can be attacked.
+		//"ProjectileModel"			""										// Particle system model for projectile.
+		//"ProjectileSpeed"			"0"										// Speed of projectile.
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"17"									// Base strength
+		"AttributeStrengthGain"		"1.9"									// Strength bonus per level. 50: 83
+		"AttributeBaseIntelligence"	"14"									// Base intelligence
+		"AttributeIntelligenceGain"	"1.8"									// Intelligence bonus per level. 50: 88
+		"AttributeBaseAgility"		"22"									// Base agility
+		"AttributeAgilityGain"		"2.5"									// Agility bonus per level. 50: 224
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		//"MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"               "295"       							// Speed
+		//"MovementTurnRate"            "0.5"       							// Turning rate.
+
+
+		// Health and Mana
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"                "133"       							// 473
+		//"StatusHealthRegen"           "0"         							// Health regeneration rate.
+		"StatusMana"                  "56"         							// 224
+		//"StatusManaRegen"             "0"         							// Mana regeneration rate.
+
+
+
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+
+		// Items
+		//-------------------------------------------------------------------------------------------------------------
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1" //weapon
+				{
+					"ItemDef"			"18227"
+				}
+				"Wearable2" // head
+				{
+					"ItemDef"			"18130"
+				}
+				"Wearable3" // armor
+				{
+					"ItemDef"			"18132"
+				}
+				"Wearable4" //arms
+				{
+					"ItemDef"			"18133"
+				}
+				"Wearable5" // belt
+				{
+					"ItemDef"			"18131"
+				}
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// HERO: Lion - Vassal
+	//=================================================================================================================
+	"npc_dota_hero_lion_template"
+	{
+		"override_hero"				"npc_dota_hero_lion"					// Hero to override
+		"Role"						"Wave-Clear,AOE"
+		"ModelScale"				"0.7"
+
+		// Abilities
+		// ------------------------------------------------------------------------------------------------------------
+		//"AbilityLayout"			""
+		"Ability1"					"lion_impale_lua"				// Ability 1
+		"Ability2"					"lion_conjuration_lua"				// Ability 2
+		"Ability3"					"lion_gun_flare_lua"				// Ability 3
+		"Ability4"					"generic_hidden"
+		"Ability5"					"generic_hidden"
+		"Ability6"					"lion_hell_fire_lua"					// Ability 6
+		"Ability7"					"lion_unlock_potential_lua"					// Ability 7
+		"Ability8"					"attribute_bonus_lua"
+
+		"AbilityTalentStart"		"51" // 10
+		"Ability10"					"generic_hidden"
+		"Ability11"					"generic_hidden"
+		"Ability12"					"generic_hidden"
+		"Ability13"					"generic_hidden"
+		"Ability14"					"generic_hidden"
+		"Ability15"					"generic_hidden"
+		"Ability16"					"generic_hidden"
+		"Ability17"					"generic_hidden"
+
+		// Armor
+		// ------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"-1.5"										// 1
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"BaseAttackSpeed"			"110"									// 14 seconds for 10 attcks
+		"AttackDamageMin"			"20"									// 42
+		"AttackDamageMax"			"26"									// 48	
+		"AttackRate"				"1.7"									// 
+		//"AttackAnimationPoint"		//"0.3"									// Normalized time in animation cycle to attack.
+		//"AttackAcquisitionRange"	//"600"									// Range within a target can be acquired.
+		"AttackRange"				"600"									// Range within a target can be attacked.
+		//"ProjectileModel"			""										// Particle system model for projectile.
+		//"ProjectileSpeed"			"0"										// Speed of projectile.
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"16"									// Base strength
+		"AttributeStrengthGain"		"1.7"									// Strength bonus per level. 50: 83
+		"AttributeBaseIntelligence"	"22"									// Base intelligence
+		"AttributeIntelligenceGain"	"3.0"									// Intelligence bonus per level. 50: 88
+		"AttributeBaseAgility"		"15"									// Base agility
+		"AttributeAgilityGain"		"1.5"									// Agility bonus per level. 50: 224
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		//"MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"               "280"       							// Speed
+		//"MovementTurnRate"            "0.5"       							// Turning rate.
+
+
+		// Health and Mana
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"                "134"       							// 454
+		//"StatusHealthRegen"           "0"         							// Health regeneration rate.
+		"StatusMana"                  "88"         							// 352
+		//"StatusManaRegen"             "0"         							// Mana regeneration rate.
+
+
+
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+
+		// Items
+		//-------------------------------------------------------------------------------------------------------------
+	}
+
+	//=================================================================================================================
+	// HERO: Drow Ranger - Dark Ranger
+	//=================================================================================================================
+	"npc_dota_hero_drow_ranger_template"
+	{
+		"override_hero"				"npc_dota_hero_drow_ranger"					// Hero to override
+		"Role"						"Carry, Glass Cannon"
+		"ModelScale"				"0.7"
+
+		// Abilities
+		// ------------------------------------------------------------------------------------------------------------
+		//"AbilityLayout"			""	//4, 5, 6 only
+		"Ability1"					"drow_ranger_accuracy_lua"					// Ability 1
+		"Ability2"					"drow_ranger_dark_arrow_lua"				// Ability 2
+		"Ability3"					"drow_ranger_trueshot_aura_lua"				// Ability 3
+		"Ability4"					"generic_hidden"
+		"Ability5"					"generic_hidden"
+		"Ability6"					"drow_ranger_empowerment_lua"				// Ability 6
+		"Ability7"					"drow_ranger_death_shot_lua"				// Ability 7
+		"Ability8"					"attribute_bonus_lua"
+
+		"AbilityTalentStart"		"51" // 10
+		"Ability10"					"generic_hidden"
+		"Ability11"					"generic_hidden"
+		"Ability12"					"generic_hidden"
+		"Ability13"					"generic_hidden"
+		"Ability14"					"generic_hidden"
+		"Ability15"					"generic_hidden"
+		"Ability16"					"generic_hidden"
+		"Ability17"					"generic_hidden"
+
+		// Armor
+		// ------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"-1.7"										// 2
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"BaseAttackSpeed"			"114"									// 12.5 second for 10 attacks
+		"AttackDamageMin"			"11"									// 33
+		"AttackDamageMax"			"22"									// 44
+		"AttackRate"				"1.7"									// 
+		//"AttackAnimationPoint"		//"0.7"									// Normalized time in animation cycle to attack.
+		//"AttackAcquisitionRange"	//"600"									// Range within a target can be acquired.
+		"AttackRange"				"600"									// Range within a target can be attacked.
+		//"ProjectileModel"			"drow_base_attack"										// Particle system model for projectile.
+		//"ProjectileSpeed"			"1250"										// Speed of projectile.
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"17"									// Base strength
+		"AttributeStrengthGain"		"1.9"									// Strength bonus per level. 50: 
+		"AttributeBaseIntelligence"	"15"									// Base intelligence
+		"AttributeIntelligenceGain"	"1.4"									// Intelligence bonus per level. 50: 
+		"AttributeBaseAgility"		"22"									// Base agility
+		"AttributeAgilityGain"		"2.75"									// Agility bonus per level. 50: 
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		//"MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"               "300"       							// Speed
+		//"MovementTurnRate"            "0.5"       							// Turning rate.
+
+
+		// Health and Mana
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"                "99"       							// 473
+		//"StatusHealthRegen"           "0"         							// Health regeneration rate.
+		"StatusMana"                  "60"         							// 240
+		//"StatusManaRegen"             "0"         							// Mana regeneration rate.
+
+
+
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+
+		// Items
+		//-------------------------------------------------------------------------------------------------------------
+	}
+
+	//=================================================================================================================
+	// HERO: Pudge - Abomination
+	//=================================================================================================================
+	"npc_dota_hero_pudge_template"
+	{
+		"override_hero"				"npc_dota_hero_pudge"					// Hero to override
+		"Role"						"durable, disable, wave clear"
+		"ModelScale"				"0.98"
+
+		// Abilities
+		// ------------------------------------------------------------------------------------------------------------
+		//"AbilityLayout"			""	//4, 5, 6 only
+		"Ability1"					"pudge_unholy_rage_lua"					// Ability 1
+		"Ability2"					"pudge_disease_flap_lua"				// Ability 2
+		"Ability3"					"pudge_corrosive_sting_lua"				// Ability 3
+		"Ability4"					"generic_hidden"
+		"Ability5"					"generic_hidden"
+		"Ability6"					"pudge_chaos_mastery_lua"				// Ability 6
+		"Ability7"					"pudge_demonic_fists_lua"				// Ability 7
+		"Ability8"					"attribute_bonus_lua"
+
+		"AbilityTalentStart"		"51" // 10
+		"Ability10"					"generic_hidden"
+		"Ability11"					"generic_hidden"
+		"Ability12"					"generic_hidden"
+		"Ability13"					"generic_hidden"
+		"Ability14"					"generic_hidden"
+		"Ability15"					"generic_hidden"
+		"Ability16"					"generic_hidden"
+		"Ability17"					"generic_hidden"
+
+		// Armor
+		// ------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"-1.3"										// 1
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"BaseAttackSpeed"			"107"									// 14.3 seconds for 10 attacks
+		"AttackDamageMin"			"27"									// 52
+		"AttackDamageMax"			"33"									// 58
+		"AttackRate"				"1.7"									// 
+		//"AttackAnimationPoint"		//"0.7"									// Normalized time in animation cycle to attack.
+		//"AttackAcquisitionRange"	//"600"									// Range within a target can be acquired.
+		"AttackRange"				"128"									// Range within a target can be attacked.
+		//"ProjectileModel"			"drow_base_attack"										// Particle system model for projectile.
+		//"ProjectileSpeed"			"1250"										// Speed of projectile.
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		//"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"25"									// Base strength
+		"AttributeStrengthGain"		"3.2"									// Strength bonus per level. 50: 
+		"AttributeBaseIntelligence"	"14"									// Base intelligence
+		"AttributeIntelligenceGain"	"1.5"									// Intelligence bonus per level. 50: 
+		"AttributeBaseAgility"		"14"									// Base agility
+		"AttributeAgilityGain"		"1.5"									// Agility bonus per level. 50: 
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		//"MovementCapabilities"        "DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementSpeed"               "285"       							// Speed
+		//"MovementTurnRate"            "0.5"       							// Turning rate.
+
+
+		// Health and Mana TODO
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"                "75"       							// 625
+		//"StatusHealthRegen"           "0"         							// Health regeneration rate.
+		"StatusMana"                  "56"         							// 224
+		//"StatusManaRegen"             "0"         							// Mana regeneration rate.
+
+
+
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+
+		// Items
+		//-------------------------------------------------------------------------------------------------------------
+	}
+
+
+
+	
+	
+	
+	//=================================================================================================================
+	// HERO: Gyrocopter
+	//=================================================================================================================
+	"npc_dota_hero_gyrocopter_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_gyrocopter"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Abyssal Underlord
+	//=================================================================================================================
+	"npc_dota_hero_abyssal_underlord_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_abyssal_underlord"
+
+		"VisionNighttimeRange"		"1800"
+	}
+	//=================================================================================================================
+	// HERO: Winter Wyvern
+	//=================================================================================================================
+	"npc_dota_hero_winter_wyvern_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_winter_wyvern"
+
+		"Ability1"				"winter_wyvern_arctic_burn_nb2017"
+		"Ability14"				"special_bonus_all_stats_12"		// replaces Winter's Curse slow duration increase
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Tusk
+	//=================================================================================================================
+	"npc_dota_hero_tusk_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_tusk"
+		"Ability6"				"tusk_walrus_wallop_nb2017"
+		"Ability11"				"special_bonus_unique_tusk_walrus_wallop_knockback_distance"	// replaces Walrus Punch Stun Duration "special_bonus_unique_tusk_7"
+		"Ability15"				"special_bonus_unique_tusk_walrus_wallop_crit"
+		"Ability16"				"special_bonus_unique_tusk_walrus_wallop_auto_trigger"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Disruptor
+	//=================================================================================================================
+	"npc_dota_hero_disruptor_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_disruptor"
+		"Ability2"				"disruptor_glimpse_nb2017"
+		"Ability12"				"special_bonus_unique_disruptor_glimpse_arrival_damage"
+		"Ability16"				"special_bonus_unique_disruptor_glimpse_cooldown_reduction"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Phantom Assassin
+	//=================================================================================================================
+	"npc_dota_hero_phantom_assassin_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_phantom_assassin"
+		"Ability1"				"phantom_assassin_stifling_dagger_nb2017"
+		"Ability2"				"phantom_assassin_phantom_strike_nb2017"
+		"Ability15"				"special_bonus_unique_phantom_assassin_phantom_strike_evasion"
+		"Ability17"				"special_bonus_unique_phantom_assassin_stifling_dagger_count"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Treant
+	//=================================================================================================================
+	"npc_dota_hero_treant_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_treant"
+		//"Ability1"				"treant_overgrowth"			// vines seem like a fine basic ability for the mode - no need to switch the ult up
+		//"Ability2"				"treant_leech_seed_nb2017"	// 2022 leech seed seems fine?
+		"Ability4"				"treant_great_protector"
+		"Ability12"					"special_bonus_strength_10"	// replacing "Leech Seed Movement Slow" which seems terrible in the mode
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Dark Seer
+	//=================================================================================================================
+	"npc_dota_dark_seer_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_dark_seer"
+		"Ability6"				"dark_seer_wall_of_replica_nb2017"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Zeus
+	//=================================================================================================================
+	"npc_dota_hero_zeus_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_zuus"	
+		"Ability3"				"zuus_heavenly_jump"
+		"Ability5"				"zuus_static_field_dark_moon"
+		"Ability6"				"zeus_thundergods_wrath_nb2017"
+		"Ability14"				"special_bonus_spell_amplify_6" // Replaces TGW damage
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Phoenix
+	//=================================================================================================================
+	"npc_dota_hero_phoenix_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_phoenix"
+		"Ability2"				"phoenix_fire_spirits_nb2017"
+		"Ability7"				"phoenix_launch_fire_spirit_nb2017"
+		"Ability10"				"special_bonus_cooldown_reduction_10"
+		"Ability13"				"special_bonus_hp_regen_15"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Earth Spirit
+	//=================================================================================================================
+	"npc_dota_hero_earth_spirit_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_earth_spirit"
+		"Ability13"				"special_bonus_cooldown_reduction_10"
+		"Ability16"				"special_bonus_strength_20"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Ember Spirit
+	//=================================================================================================================
+	"npc_dota_hero_ember_spirit_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_ember_spirit"
+		"Ability3"				"ember_spirit_flame_guard_nb2017"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Tiny
+	//=================================================================================================================
+	"npc_dota_hero_tiny_nb2017"
+	{
+		"override_hero" 		"npc_dota_hero_tiny"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Techies
+	//=================================================================================================================
+	"npc_dota_hero_techies_nb2017"
+	{
+		"override_hero" 		"npc_dota_hero_techies"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Keeper of the Light
+	//=================================================================================================================
+	"npc_dota_hero_keeper_of_the_light_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_keeper_of_the_light"
+		"Ability2"				"keeper_of_the_light_light_elemental"
+		"Ability13"				"special_bonus_spell_amplify_15"
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Medusa
+	//=================================================================================================================
+	"npc_dota_hero_medusa_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_medusa"
+		//"Ability2"				"medusa_mystic_snake_dm2017"	// this mystic snake stones enemies it hits which is now the scepter
+
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Sniper
+	//=================================================================================================================
+	"npc_dota_hero_sniper_nb2017"
+	{
+		"override_hero"			"npc_dota_hero_sniper"
+		"Ability6"				"sniper_assassinate_dm2017"
+		
+		"VisionNighttimeRange"		"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Axe
+	//=================================================================================================================
+	"npc_dota_hero_axe_dark_moon"
+	{
+		"override_hero"			"npc_dota_hero_axe"
+		
+		"Ability2"					"axe_battle_rage"
+		"Ability3"					"holdout_axe_counter_helix"
+		"Ability6"					"holdout_culling_blade"
+		"Ability12"					"special_bonus_hp_325"	// replacing Battle Hunger slow - special_bonus_unique_axe_6
+		"Ability15"					"special_bonus_magic_resistance_15"	// replacing +Armor per Battle Hunger Stack - special_bonus_unique_axe_3
+		"Ability17"					"special_bonus_all_stats_20"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Drow Ranger
+	////=================================================================================================================
+	//"npc_dota_hero_drow_ranger_dark_moon"
+	//{
+	//	"override_hero"				"npc_dota_hero_drow_ranger"
+	//	"Ability1"					"holdout_glacier_arrows"
+	//	"Ability2"					"holdout_multishot"
+	//	"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	//}
+
+	//=================================================================================================================
+	// HERO: Venomancer
+	//=================================================================================================================
+	"npc_dota_hero_venomancer_dark_moon"
+	{
+		"override_hero"			"npc_dota_hero_venomancer"
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityLayout"				"5"
+		"Ability4"					"holdout_scourge_ward"					// Ability 3
+		"Ability5"					"holdout_poison_nova"					// Ability 4
+		"Ability16"					"special_bonus_spell_amplify_10"
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Storm Spirit
+	//=================================================================================================================
+	"npc_dota_hero_storm_spirit_dark_moon"
+	{
+		"override_hero"				"npc_dota_hero_storm_spirit"
+		"Ability2"					"holdout_electric_vortex"	
+		"Ability6"					"holdout_ball_lightning"
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Shadow Fiend
+	//=================================================================================================================
+	"npc_dota_hero_shadow_fiend_dark_moon"
+	{
+		"override_hero"				"npc_dota_hero_nevermore"
+		//"Ability1"					"holdout_shadowraze1"
+		//"Ability2"					"holdout_shadowraze2"
+		//"Ability3"					"holdout_shadowraze3"
+		"Ability12"						"special_bonus_unique_shadow_fiend_shadow_raze_cooldown"		// replaced presence vs. buildings
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Legion Commander
+	//=================================================================================================================
+	"npc_dota_hero_legion_commander_dark_moon"
+	{
+		"override_hero"				"npc_dota_hero_legion_commander"
+		
+		"Ability6"					"holdout_gladiators_unite"
+		"Ability11"					"special_bonus_armor_4"				// replaces "duel cast range"
+		"Ability13"					"special_bonus_movement_speed_25"	// replaces "overwhelming odds hero damage"
+		"Ability16"					"special_bonus_all_stats_15"		// replaces "duel damage bonus"
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Witch Doctor
+	//=================================================================================================================
+	"npc_dota_hero_witch_doctor_dark_moon"
+	{
+		"override_hero"				"npc_dota_hero_witch_doctor"
+		"Ability1"					"holdout_paralyzing_cask"
+		"Ability2"					"holdout_voodoo_restoration"
+		"Ability6"					"holdout_death_ward"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Juggernaut
+	//=================================================================================================================
+	"npc_dota_hero_juggernaut_dark_moon"
+	{
+		"override_hero"			"npc_dota_hero_juggernaut"
+		"Ability1"				"holdout_blade_fury"
+		"Ability6"				"holdout_omnislash"
+		"Ability17"				"special_bonus_unique_juggernaut_secret_blade_attacks"											// replaces "special_bonus_unique_juggernaut_2"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Leshrac
+	//=================================================================================================================
+	"npc_dota_hero_leshrac_dark_moon"
+	{
+		"override_hero"					"npc_dota_hero_leshrac"
+		"ArmorPhysical"					"2"
+		"AttributeIntelligenceGain"		"5"
+		"VisionNighttimeRange"			"1800"
+	}
+
+	//=================================================================================================================
+	// HERO: Bristleback
+	//=================================================================================================================
+	"npc_dota_hero_bristleback_dark_moon"
+	{
+		"override_hero"					"npc_dota_hero_bristleback"
+		"VisionNighttimeRange"			"1800"
+	}
+
+
+	//=================================================================================================================
+	// HERO: Nature's Prophet
+	//=================================================================================================================
+	"npc_dota_hero_furion"
+	{
+		"override_hero"					"npc_dota_hero_furion"
+		"VisionNighttimeRange"			"1800"
+	}
+
+}
