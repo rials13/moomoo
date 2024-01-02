@@ -5,7 +5,7 @@ LinkLuaModifier( "modifier_creature_techies_land_mine", "modifiers/modifier_crea
 
 function creature_techies_land_mine:OnSpellStart()
 	if IsServer() then
-		local hMine = CreateUnitByName( "npc_dota_creature_techies_land_mine", self:GetCursorPosition(), true, self:GetCaster(), self:GetCaster(), self:GetCaster():GetTeamNumber() )
+		local hMine = CreateUnitByName( "npc_dota_creature_techies_land_mines", self:GetCursorPosition(), true, self:GetCaster(), self:GetCaster(), self:GetCaster():GetTeamNumber() )
 		if hMine ~= nil then
 			hMine:AddNewModifier( self:GetCaster(), self, "modifier_creature_techies_land_mine", { fadetime = 0 } )
 			hMine:SetTeam( self:GetCaster():GetTeamNumber() )

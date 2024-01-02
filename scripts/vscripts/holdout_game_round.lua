@@ -6,7 +6,7 @@ if CHoldoutGameRound == nil then
 	CHoldoutGameRound = class({})
 end
 
-_G.NEUTRAL_ITEMS_PER_ROUND = 5
+_G.NEUTRAL_ITEMS_PER_ROUND = 2
 
 function CHoldoutGameRound:GetNeutralItemTier()
 	if self._nRoundNumber < 4 then 
