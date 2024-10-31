@@ -1,7 +1,9 @@
+#base "heroes/cannibal.txt" 			// Life_stealer
 // Dota Units File
 "DOTAUnits"
 {
 	"Version"	"1"	
+	
 
 	//=================================================================================
 	// Summon: Razor Biohazard Skeleton
@@ -554,7 +556,9 @@
 		// General
 		//
 		"BaseClass"					"npc_dota_fort"
-		"Model"						"models/props_structures/radiant_ancient001.vmdl"
+		//"Model"						"models/props_structures/radiant_ancient001.vmdl"
+		"Model"						"models/heroes/elder_titan/ancestral_spirit.vmdl"
+		"ModelScale"				"1.5"
 		"SoundSet"					"Creep_Good_Melee"
 		"MinimapIcon"				"minimap_ancient"
 		"MinimapIconSize"			"250"
@@ -563,9 +567,9 @@
 		// Abilities
 		//----------------------------------------------------------------
 		
-		"Ability1"					""
-		"Ability2"					""
-		"Ability3"					""
+		"Ability1"					"moo_crown_lua"
+		"Ability2"					"moo_regen_lua"
+		"Ability3"					"moo_healing_lua"
 		"Ability4"					""
 		"Ability5"					""
 		"Ability6"					""
@@ -608,7 +612,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_BUILDING"
-		"RingRadius"				"350"
+		"RingRadius"				"150"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -618,7 +622,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"6000" // 4250 also change in panaroama hud_main.js
+		"StatusHealth"				"4250" // 4250 also change in panaroama hud_main.js
 		"StatusHealthRegen"			"3"
 		"StatusMana"				"0"
 		"StatusManaRegen"			"0"
@@ -711,7 +715,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"4250"		// Base health.
-		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"StatusHealthRegen"			"0"			// Health regeneration rate.
 		"StatusMana"				"0"			// Base mana.
 		"StatusManaRegen"			"0"			// Mana regeneration rate.
 
@@ -7333,3 +7337,6 @@
 		"VisionNighttimeRange"		"500"		// Range of vision at night time.
 	}
 }
+
+
+

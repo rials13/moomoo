@@ -1,5 +1,5 @@
 drow_ranger_dark_arrow_lua = class({})
-LinkLuaModifier( "modifier_drow_ranger_dark_arrow_lua", "heroes/modifierdrow_ranger_dark_arrow_lua", LUA_MODIFIER_MOTION_NONE )
+--LinkLuaModifier( "modifier_drow_ranger_dark_arrow_lua", "heroes/modifierdrow_ranger_dark_arrow_lua", LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier( "modifier_generic_orb_effect_lua", "modifier_generic_orb_effect_lua", LUA_MODIFIER_MOTION_NONE )
 
 --------------------------------------------------------------------------------

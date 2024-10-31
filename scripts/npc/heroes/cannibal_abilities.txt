@@ -1,0 +1,130 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// Life Stealer: Cannibal
+	//=================================================================================================================
+	"life_stealer_cannibalize_lua" // 
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/life_stealer_cannibalize_lua"
+		"AbilityTextureName"			"life_stealer_cannibalize"
+		"MaxLevel"						"4"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"lifesteal_percent"		"4 5 6 7"
+		}
+	}
+
+	"life_stealer_rend_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/life_stealer_rend_lua"
+		"AbilityTextureName"			"life_stealer_rend"
+		"MaxLevel"						"4"
+		
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_viper/viper_nethertoxin_proj_launch_embers.vpcf"
+		}
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"percent_chance"		"15"
+			"armor_reduction"		"10 20 30 40"
+			"armor_reduction_radius"		"600"
+			"armor_reduction_duration"		"5.0"
+			"percent_str_damage"		"25 50 75 100"
+		}
+	}
+
+	"life_stealer_ghoul_frenzy_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/life_stealer_ghoul_frenzy_lua"
+		"AbilityTextureName"			"life_stealer_wc3_gf"
+		"MaxLevel"						"4"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_movespeed_percent"		"10 16 22 28"
+			// Base attack at level 1 = 136 (with BAS + Agility)
+			"bonus_attackspeed_percent"		"14 28 42 56"
+			"tool_tip_bonus_as_percent"		"10 20 30 40"
+		}
+	}
+
+	"life_stealer_mammoth_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/life_stealer_mammoth_lua"
+		"AbilityTextureName"			"life_stealer_mammoth"
+		"MaxLevel"						"3"
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_strength"		"30 60 90"
+			"model_scale_inc"		"25 50 100"
+		}
+	}
+
+	"life_stealer_stench_lua" // rot but no toggle
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/life_stealer_stench_lua"
+		"AbilityTextureName"			"life_stealer_stench"
+		"MaxLevel"						"1"
+
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_pudge/pudge_rot.vpcf"
+			"particle" "particles/units/heroes/hero_pudge/pudge_rot_recipient.vpcf"
+		}
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"RequiredLevel"					"20"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"				"600"
+			"damage_per_tick"				"20"
+			// ticks 0.2 seconds 
+			"damage_per_second_tooltip"				"100"
+		}
+	}
+}

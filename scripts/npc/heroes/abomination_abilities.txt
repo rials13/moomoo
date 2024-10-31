@@ -1,0 +1,212 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// Pudge: Abomination
+	//=================================================================================================================
+	//
+    "pudge_unholy_rage_lua" // like chemical rage
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/pudge_unholy_rage_lua"
+		"AbilityTextureName"			"pudge_unholy_rage" // "pudge_rot"//
+		"MaxLevel"						"4"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_alchemist/alchemist_chemical_rage_hero_effect.vpcf"
+            "particle" "particles/units/heroes/hero_alchemist/alchemist_chemical_rage.vpcf"
+        }
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"160"
+		"AbilityCooldown"				"15"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"					"3 4 5 6"
+			"bonus_damage"				"200 300 400 500"
+			"life_steal"				"10 20 30 40"
+		}
+	}
+
+	"pudge_disease_flap_lua" // like rot and eclipse , lion's hell fire
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/pudge_disease_flap_lua"
+		"AbilityTextureName"			"pudge_disease_flap"//
+		"MaxLevel"						"4"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_pudge/pudge_rot_recipient.vpcf"
+            "particle" "particles/units/heroes/hero_pudge/pudge_rot.vpcf"
+        }
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.6" // from eclipse
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150"
+		"AbilityCooldown"				"30"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"					"7"
+			"dps"						"50 75 100 125"
+			"radius"					"1000" // seems about 1000 in Wc3
+			"immobile"					"5"
+		}
+	}
+
+	"pudge_corrosive_sting_lua" // almost exactly veno's poison sting
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/pudge_corrosive_sting_lua"
+		"AbilityTextureName"			"pudge_corrosive_sting" //"venomancer_poison_sting"//
+		"MaxLevel"						"4"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_venomancer/venomancer_poison_debuff.vpcf"
+        }
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"					"5"
+			"dps"						"10 20 30 40"
+			"slow_pct"					"-10 -20 -30 -40"
+		}
+	}
+
+	"pudge_chaos_mastery_lua" // similar to flesh heap and atrophy aura
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/pudge_chaos_mastery_lua"
+		"AbilityTextureName"			"pudge_chaos_mastery" //"warlock_upheaval"//
+		"MaxLevel"						"3"
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"kills"						"8"
+			"str_per_stack"				"1"
+			"base_damage_pct"			"35 70 105"
+		}
+	}
+
+	"pudge_demonic_fists_lua" // like armlet and dragon knights slpash
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/pudge_demonic_fists_lua"
+		"AbilityTextureName"			"pudge_demonic_fists" // change toggled form too in lua file
+		"MaxLevel"						"1"
+		"RequiredLevel"					"20"
+
+        "precache"
+        {
+            "particle" "particles/items_fx/armlet.vpcf"
+        }
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_UNRESTRICTED"
+
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"self_dps"					"500"
+			"attack_spd_pct"			"400"
+			"aoe_dps"					"300"
+			"radius"					"150"
+			"tick"						"0.2" // same as rot
+		}
+	}
+}

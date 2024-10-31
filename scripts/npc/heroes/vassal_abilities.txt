@@ -1,0 +1,247 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// Lion: Vassal
+	//=================================================================================================================
+	"lion_impale_lua" // Similar to lion's Earthspike in Dota
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/lion_impale_lua"
+		"AbilityTextureName"			"lion_impale_wc3"
+		"MaxLevel"						"4"
+
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+			"particle"	"particles/units/heroes/hero_lion/lion_spell_impale.vpcf"
+			"particle"	"particles/units/heroes/hero_lion/lion_spell_impale_hit_spikes.vpcf"
+		}
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"575" // from lion
+		"AbilityCastPoint"				"0.3" // from lion
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"14" // 12 lion
+		"AbilityManaCost"				"100 120 145 170"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"100 175 250 325"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"width"				"125 125 125 125" // from lion
+			"duration"			"0.5 1.0 1.5 2.0"
+			"length_buffer"		"700" // or 800
+			"speed"				"1600 1600 1600 1600"
+		}
+	}
+
+	"lion_conjuration_lua" // dooms but no duration
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/lion_conjuration_lua"
+		"AbilityTextureName"			"lion_conjuration"
+		"MaxLevel"						"4"
+
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_bristleback/bristleback_quill_spray.vpcf"
+            "particle" "particles/units/heroes/hero_bristleback/bristleback_quill_spray_impact.vpcf"
+		}
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+		"AbilityManaCost"				"140"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"75 150 225 300"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"				"700"
+			"projectile_speed"		"2400"
+		}
+	}
+
+	"lion_gun_flare_lua" // underlords firestorm
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/lion_gun_flare_lua"
+		"AbilityTextureName"			"lion_gun_flare"
+		"MaxLevel"						"4"
+
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_abyssal_underlord.vsndevts"
+            "particle"  "particles/units/heroes/heroes_underlord/underlord_firestorm_pre.vpcf"
+			"particle"	"particles/units/heroes/heroes_underlord/abyssal_underlord_firestorm_wave_burn.vpcf"
+            "particle"	"particles/units/heroes/heroes_underlord/abyssal_underlord_firestorm_wave.vpcf"
+		}
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600 625 650 675" // from firestorm
+		"AbilityCastPoint"				"0.5" // frestorm
+		// backswing 0.6
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15"
+		"AbilityManaCost"				"120 140 160 180"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"					"425" // firestorm
+			"wave_duration"					"7.0"
+			"wave_count"					"6"
+			"wave_damage"					"20 40 60 80"
+			"wave_interval"					"0.9"
+			"burn_damage"					"10 20 30 40"
+			"burn_interval"					"1.0"
+			"burn_duration"					"4.0"
+			"first_wave_delay"				"0.0"
+			"building_damage"				"33"
+		}
+	}
+
+	"lion_hell_fire_lua" // Similar to Crystal maiden freezing field
+	{
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/lion_hell_fire_lua"
+		"AbilityTextureName"			"lion_hell_fire"
+		"MaxLevel"						"3"
+
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
+			"particle"	"particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_explosion.vpcf"
+			"particle"	"particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_snow.vpcf"
+            "particle"  "particles/econ/items/queen_of_pain/qop_2022_immortal/queen_2022_scream_of_pain_owner_firewave.vpcf"
+		}
+		
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityChannelTime"			"6"
+		"AbilityDuration"				"6.0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"120 90 60"
+		"AbilityManaCost"				"200 300 400"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"			"1000" // 835 for freezing field
+			"wave_count"		"6"
+			"wave_interval"		"1.0"
+		}
+	}
+
+	"lion_unlock_potential_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/lion_unlock_potential_lua"
+		"AbilityTextureName"			"lion_unlock_potential"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"20"
+
+        "precache"
+        {
+            "soundfile"	"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"
+            "particle" "particles/units/heroes/hero_ogre_magi/ogre_magi_bloodlust_cast.vpcf"
+        }
+
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.35"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"200"
+		"AbilityManaCost"				"400"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"chance_proc"		"6"
+			"bonus_damage_pct"	"200"
+			"hp_regen_pct"		"1"
+			"armor"				"100"
+			"model_scale"		"25"
+		}
+	}
+
+}

@@ -36,7 +36,7 @@ function modifier_pudge_corrosive_sting_lua_debuff:OnCreated( kv )
 		damage = dps,
 		damage_type = self:GetAbility():GetAbilityDamageType(),
 		ability = self:GetAbility(), --Optional.
-		damage_flags = DOTA_DAMAGE_FLAG_NONE, --Optional.
+		damage_flags = DOTA_DAMAGE_FLAG_HPLOSS, --Optional.
 	}
 	-- ApplyDamage(damageTable)
 

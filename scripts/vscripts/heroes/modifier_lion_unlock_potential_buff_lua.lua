@@ -56,6 +56,8 @@ function modifier_lion_unlock_potential_buff_lua:DeclareFunctions()
         MODIFIER_EVENT_ON_ABILITY_FULLY_CAST,
         MODIFIER_EVENT_ON_ATTACK_FINISHED,
         MODIFIER_PROPERTY_MODEL_SCALE,
+
+        MODIFIER_PROPERTY_TOOLTIP,
 	}
 
 	return funcs
@@ -75,6 +77,10 @@ end
 
 function modifier_lion_unlock_potential_buff_lua:GetModifierModelScale()
 	return self.model_scale
+end
+
+function modifier_lion_unlock_potential_buff_lua:OnTooltip()
+	return self.chance_proc
 end
 
 function modifier_lion_unlock_potential_buff_lua:OnAttackFinished( params )
@@ -104,19 +110,23 @@ function modifier_lion_unlock_potential_buff_lua:ResetCooldowns()
     if IsServer() then
         print("resetiing cooldowns...")
         -- reset cooldowns
-        for _ = 0, 7 do
+        for _ = 0, 20 do
             local ability = self:GetParent():GetAbilityByIndex( _ )
-            if ability then
+            local item = self:GetParent():GetItemInSlot( _ )
+            if ability and (ability:GetCooldownTime() > 0) then
                 ability:EndCooldown()
             end
-        end
-        -- reset item cooldowns
-        for _ = 0, 5 do
-            local item = self:GetParent():GetItemInSlot( _ )
             if item then
                 item:EndCooldown()
             end
         end
+        -- reset item cooldowns
+        --for _ = 0, 5 do
+            --local item = self:GetParent():GetItemInSlot( _ )
+            --if item then
+                --item:EndCooldown()
+            --end
+        --end
         -- remove buff
         if self:GetParent():HasModifier("modifier_lion_unlock_potential_buff_lua") then
             self:GetParent():RemoveModifierByName("modifier_lion_unlock_potential_buff_lua")

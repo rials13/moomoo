@@ -1,0 +1,209 @@
+"DOTAAbilities"
+{
+    //=================================================================================================================
+	// Razor: Biohazard
+	//=================================================================================================================
+	"razor_bryans_breath_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/razor_bryans_breath_lua"
+		"AbilityTextureName"			"razor_bryans_breath"
+		"MaxLevel"						"4"
+
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_viper/viper_nethertoxin_impact_vibe.vpcf"
+            "particle" "particles/units/heroes/hero_viper/viper_nethertoxin_debuff_splash.vpcf"
+		}
+		
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.4"
+		//"AbilityDuration"				"15.0 15.0 15.0 15.0"
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"22"
+		"AbilityManaCost"				"90 105 120 135"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"strike_damage"			"50 100 150 200"
+			"duration_damage"		"10 20 30 50"
+			"movement_slow"			"-20 -30 -40 -50"
+			"duration"				"16"
+			"radius"				"800"	
+		}
+	}
+
+	"razor_jovans_touch_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/razor_jovans_touch_lua"
+		"AbilityTextureName"			"razor_jovans_touch"
+		"MaxLevel"						"4"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_sandking/sandking_caustic_finale_debuff.vpcf"
+            "particle" "particles/units/heroes/hero_sandking/sandking_caustic_finale_explode.vpcf"
+        }
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"					"400"
+			"damage"					"90 130 170 220"
+			"damage_expire"				"20 50 80 110"
+			"duration"					"6"
+		}
+	}
+
+	"razor_ronels_skin_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/razor_ronels_skin_lua"
+		"AbilityTextureName"			"razor_ronels_skin"
+		"MaxLevel"						"4"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_viper/viper_nethertoxin_debuff.vpcf"
+        }
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"					"800"
+			"magic_reduction"			"20 30 40 50"
+			"armor_reduction"			"1 2 3 4"
+		}
+	}
+
+	"razor_tiny_treb_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/razor_tiny_treb_lua"
+		"AbilityTextureName"			"razor_tiny_treb"
+		"MaxLevel"						"3"
+
+        "precache"
+        {
+            "model" "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
+        }
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_agility"				"60 90 120"
+			"percent_chance"			"15"
+			"skeleton_duration"			"20"
+			"skeleton_life_tooltip"		"1000 2000 3000"
+			"skeleton_life_add"			"0 1000 2000"
+			"skeleton_damage"			"15 30 60"
+			"skeleton_armor"			"1 2 3"
+		}
+	}
+
+	"razor_troys_strength_lua"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"heroes/razor_troys_strength_lua"
+		"AbilityTextureName"			"razor_troys_strength"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"20"
+
+		// Ability General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Ability Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Ability Resource
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_str_agi"				"75"
+		}
+	}
+}

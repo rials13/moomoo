@@ -21,5 +21,7 @@ end
 function lion_hell_fire_lua:OnChannelFinish( bInterrupted )
 	if self.modifier then
 		self:GetCaster():RemoveModifierByName("modifier_lion_hell_fire_lua")
+		--self.modifier:Destroy()
+		--self.modifier = nil
 	end
 end

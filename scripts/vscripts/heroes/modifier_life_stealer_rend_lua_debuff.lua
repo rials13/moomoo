@@ -60,23 +60,23 @@ end
 -- Graphics & Animations
 function modifier_life_stealer_rend_lua_debuff:PlayEffects()
 	-- Get Resources
-	local particle_cast = "particles/econ/items/viper/viper_immortal_tail_ti8/viper_immortal_ti8_nethertoxin_ring.vpcf"
+	local particle_cast = "particles/units/heroes/hero_viper/viper_nethertoxin_proj_launch_embers.vpcf"
 	local sound_cast = "hero_viper.CorrosiveSkin"
 
 	-- Create Particle
 	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN, self:GetParent() )
 	ParticleManager:SetParticleControl( effect_cast, 0, self:GetParent():GetOrigin() )
-	ParticleManager:SetParticleControl( effect_cast, 1, Vector( self.armor_reduction_radius, 1, 1 ) )
+	--ParticleManager:SetParticleControl( effect_cast, 1, Vector( self.armor_reduction_radius, 1, 1 ) )
 
-	-- buff particle
-	self:AddParticle(
-		effect_cast,
-		false, -- bDestroyImmediately
-		false, -- bStatusEffect
-		-1, -- iPriority
-		false, -- bHeroEffect
-		false -- bOverheadEffect
-	)
+	-- -- buff particle
+	-- self:AddParticle(
+	-- 	effect_cast,
+	-- 	false, -- bDestroyImmediately
+	-- 	false, -- bStatusEffect
+	-- 	-1, -- iPriority
+	-- 	false, -- bHeroEffect
+	-- 	false -- bOverheadEffect
+	-- )
 
 	-- Create Sound
 	EmitSoundOn( sound_cast, self:GetParent() )

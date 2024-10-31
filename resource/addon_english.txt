@@ -2,7 +2,51 @@
 {
 	"Language"		"English"
 	"Tokens"
-	{		
+	{
+		// These make it so we can use better tooltips (like holding alt to show what each stat provides)
+		// To create a new key ( like $health ) just add the entry here
+		"dota_ability_variable_health"				"Health"					// $health
+		"dota_ability_variable_mana"				"Mana"						// $mana
+		"dota_ability_variable_armor"				"Armor"						// $armor
+		"dota_ability_variable_damage"				"Damage"					// $damage
+		"dota_ability_variable_str"					"Strength"					// $str
+		"dota_ability_variable_int"					"Intelligence"				// $int
+		"dota_ability_variable_agi"					"Agility"					// $agi
+		"dota_ability_variable_all"					"All Attributes"			// $all
+		"dota_ability_variable_primary_attribute"	"Primary Attribute"			// $primary_attribute
+		"dota_ability_variable_attack"				"Attack Speed"				// $attack
+		"dota_ability_variable_attack_pct"			"Base Attack Speed Percentage"	// $attack_pct
+		"dota_ability_variable_hp_regen"			"Health Regeneration"		// $hp_regen
+		"dota_ability_variable_lifesteal"			"Lifesteal"					// $lifesteal
+		"dota_ability_variable_mana_regen"			"Mana Regeneration"			// $mana_regen
+		"dota_ability_variable_mana_regen_aura"		"Mana Regeneration Aura"	// $mana_regen_aura
+		"dota_ability_variable_spell_amp"			"Spell Damage"				// $spell_amp
+		"dota_ability_variable_debuff_amp"			"Debuff Duration"			// $debuff_amp
+		"dota_ability_variable_move_speed"			"Movement Speed"			// $move_speed
+		"dota_ability_variable_evasion"				"Evasion"					// $evasion
+		"dota_ability_variable_spell_resist"		"Magic Resistance"			// $spell_resist
+		"dota_ability_variable_spell_lifesteal"		"Spell Lifesteal"			// $spell_lifesteal
+		"dota_ability_variable_spell_lifesteal_creep"	"Spell Lifesteal (Creeps)"	// $spell_lifesteal_creep
+		"dota_ability_variable_spell_lifesteal_hero"	"Spell Lifesteal (Heroes)"	// $spell_lifesteal_hero
+		"dota_ability_variable_selected_attrib"		"Selected Attribute"		// $selected_attribute
+		"dota_ability_variable_attack_range"		"Attack Range <font color='#7d7d7d'>(Ranged Only)</font>"	// $attack_range
+		"dota_ability_variable_attack_range_melee"	"Attack Range <font color='#7d7d7d'>(Melee Only)</font>"	// $attack_range_melee
+		"dota_ability_variable_cast_range"			"Cast Range"				// $cast_range
+		"dota_ability_variable_status_resist"		"Status Resistance"			// $status_resist
+		"dota_ability_variable_projectile_speed"	"Projectile Speed"			// $projectile_speed
+		"dota_ability_variable_manacost_reduction"	"Manacost Reduction"		// $manacost_reduction
+		"dota_ability_variable_cooldown_reduction"	"Cooldown Reduction"		// $cooldown_reduction 
+		"dota_ability_variable_max_mana_percentage"	"Max Mana Bonus"			// $max_mana_percentage
+		"dota_ability_variable_slow_resistance"		"Slow Resistance"			// $slow_resistance
+		"dota_ability_variable_aoe_bonus"			"AoE Bonus"					// $aoe_bonus
+
+		"dota_ability_variable_damage_int_hero"	"Damage (Intelligence Heroes)"
+		"dota_ability_variable_damage_agi_hero"	"Damage (Agility Heroes)"
+		"dota_ability_variable_damage_str_hero"	"Damage (Strength Heroes)"
+		"dota_ability_variable_damage_universal_hero"	"Damage (Universal Heroes)"
+
+
+
 		"DOTA_Tooltip_ability_item_bag_of_gold"								"Bag of Gold"
 		"DOTA_GameMode_15"													"Dark Moon"
 		"DOTA_GameMode_19"													"Dark Moon"
@@ -235,7 +279,7 @@
 
 		"DOTA_Tooltip_ability_item_orb_of_fire"										"Orb of Fire"
 		"DOTA_Tooltip_ability_item_orb_of_fire_Lore"								"Unknown power"
-		"DOTA_Tooltip_ability_item_orb_of_fire_all_stats"							"+ All Stats"
+		"DOTA_Tooltip_ability_item_orb_of_fire_bonus_all_stats"						"+$all"
 
 		"DOTA_Tooltip_ability_item_orb_of_frost"									"Orb of Frost"
 		"DOTA_Tooltip_ability_item_orb_of_frost_Lore"								"Unknown potential"
@@ -874,6 +918,14 @@
 		//
 		// Generic Hidden
 		"DOTA_Tooltip_ability_generic_hidden"													""
+		"DOTA_Tooltip_ability_special_bonus_unique_generic_hidden0"								"Not Learnable"
+		"DOTA_Tooltip_ability_special_bonus_unique_generic_hidden1"								"Not Learnable"
+		"DOTA_Tooltip_ability_special_bonus_unique_generic_hidden2"								"Not Learnable"
+		"DOTA_Tooltip_ability_special_bonus_unique_generic_hidden3"								"Not Learnable"
+		"DOTA_Tooltip_ability_special_bonus_unique_generic_hidden4"								"Not Learnable"
+		"DOTA_Tooltip_ability_special_bonus_unique_generic_hidden5"								"Not Learnable"
+		"DOTA_Tooltip_ability_special_bonus_unique_generic_hidden6"								"Not Learnable"
+		"DOTA_Tooltip_ability_special_bonus_unique_generic_hidden7"								"Not Learnable"
 		//
 		//-------------------------------------------------------------------------------------
 		//
@@ -881,13 +933,33 @@
 		"DOTA_Tooltip_ability_attribute_bonus_lua"												"Attribute Bonus"
 		"DOTA_Tooltip_ability_attribute_bonus_lua_Description"									"Gains - can level up 35 times"
 		"DOTA_Tooltip_ability_attribute_bonus_lua_Lore"											"When spells aren't good enough"
-		"DOTA_Tooltip_ability_attribute_bonus_Lua_all_stats"									"All stats per level:"
+		"DOTA_Tooltip_ability_attribute_bonus_lua_all_stats"									"All stats per level:"
+		"DOTA_Tooltip_ability_attribute_bonus_lua_Note0"										"Attribute Bonus fom Talent Tree is disabled"
 		//
 		//-------------------------------------------------------------------------------------
 		// Custom Moo Moo Heroes:
 		//
+		// moo crown
+		"DOTA_Tooltip_ability_moo_crown_lua"													"Crown"
+		"DOTA_Tooltip_ability_moo_crown_lua_Description"										"If a hero is within %hero_range% radius, Moo Moo gains +%bonus_armor% armor"
+		"DOTA_Tooltip_modifier_moo_crown_lua_effect"											"Crown"
+		"DOTA_Tooltip_modifier_moo_crown_lua_effect_Description"								"Receiving +%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% bonus armor"
+		// moo regen
+		"DOTA_Tooltip_ability_moo_regen_lua"													"Health Regen"
+		"DOTA_Tooltip_ability_moo_regen_lua_Description"										"If an enemy is not within %enemy_range% radius, Moo Moo gains +%hp_regen% health regen"
+		"DOTA_Tooltip_modifier_moo_regen_lua_effect"											"Regen"
+		"DOTA_Tooltip_modifier_moo_regen_lua_effect_Description"								"Receiving +%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% bonus health regen"
+		// moo heal
+		"DOTA_Tooltip_ability_moo_healing_lua"													"AOE Heal"
+		"DOTA_Tooltip_ability_moo_healing_lua_Description"										"If a hero is within %heal_range% radius, that hero gains up to +%hp_regen_max% health regen the closer they stand to Moo Moo "
+		"DOTA_Tooltip_modifier_moo_healing_lua"													"AOE Heal"
+		"DOTA_Tooltip_modifier_moo_healing_lua_Description"										"Receiving up to %dMODIFIER_PROPERTY_TOOLTIP% bonus health regen (based on distance from Moo Moo)"
+		//
+		//
 		//
 		"npc_dota_hero_life_stealer"															"Cannibal"
+		"npc_dota_hero_life_stealer_npedesc1"													"With all passive abilities, lifesteal and rot your way to victory"
+		"npc_dota_hero_life_stealer_bio"														"Bio"
 		// Canniablize
 		"DOTA_Tooltip_ability_life_stealer_cannibalize_lua"										"Cannibalize"
 		"DOTA_Tooltip_ability_life_stealer_cannibalize_lua_Description"							"Gain hit points when philpo hits an enemy unit."
@@ -925,6 +997,8 @@
 		//-------------------------------------------------------------------------------------
 		//
 		"npc_dota_hero_razor"																	"Biohazard"
+		"npc_dota_hero_razor_npedesc1"															"Exlode corpses for AOE damage and create skeletons to fight for you"
+		"npc_dota_hero_razor_bio"																"bio"
 		// Bryan's Breath
 		"DOTA_Tooltip_ability_razor_bryans_breath_lua"											"Bryan's Breath"
 		"DOTA_Tooltip_ability_razor_bryans_breath_lua_Description"								"The Biohazard unleashes a poison of breath at enemy units dealing damage in an AOE then applies damage over time. The poisoned unit has its movement speed slowed for the duration"
@@ -959,6 +1033,8 @@
 		"DOTA_Tooltip_ability_razor_tiny_treb_lua_Description"									"<h1>Passive: Spawn Skeleton</h1> Gives a %percent_chance%%% chance to create a Skeleton from a fallen enemy unit.<br><br>Skeleton Duration: %skeleton_duration% seconds<br>Skeleton HP: %skeleton_life_tooltip%<br>Skeleton Damage: %skeleton_damage%<br>Skeleton Armor %skeleton_armor%"
 		"DOTA_Tooltip_ability_razor_tiny_treb_lua_Lore"											""
 		"DOTA_Tooltip_ability_razor_tiny_treb_lua_bonus_agility"								"+Agility"
+		"DOTA_Tooltip_ability_razor_tiny_treb_lua_Note0"										"Skeletons have a very aggressive enemy aquisition setting"
+
 		// Troy's Strength
 		"DOTA_Tooltip_ability_razor_troys_strength_lua"											"Troy's Strength"
 		"DOTA_Tooltip_ability_razor_troys_strength_lua_Description"								"The Biohazard using the power of fallen corpses giving him a boost in both strength and agility<br><br>Automatically Leveled at Level 20"
@@ -968,6 +1044,9 @@
 		//-------------------------------------------------------------------------------------
 		//
 		"npc_dota_hero_lion"																	"Vassal"
+		"npc_dota_hero_lion_npedesc1"															"A nuker and support, Vassal has some familiar spells similar to Earthspike, Scorched Earth, Firestorm, and Freezing Field - however, the unlock potential truely makes the Vassal a late-game asset."
+		"npc_dota_hero_lion_bio"																"bio"
+		
 		// Impale
 		"DOTA_Tooltip_ability_lion_impale_lua"													"Impale"
 		"DOTA_Tooltip_ability_lion_impale_lua_Description"										"Slams the ground with massive claws, shooting spiked tendrils out in a straight line, dealing damage and hurling enemy ground units into the air in their wake, stunning them."
@@ -1004,7 +1083,7 @@
 		"DOTA_Tooltip_ability_lion_unlock_potential_lua_Note0"									"Damage increase affects all outgoing damage"
 		"DOTA_Tooltip_ability_lion_unlock_potential_lua_Note1"									"Ability may be auto-cast"
 		"DOTA_Tooltip_modifier_lion_unlock_potential_buff_lua"									"Unlock Potential"
-		"DOTA_Tooltip_modifier_lion_unlock_potential_bff_lua_Description"						"This units has bonus damage, health regen, and armor. There is a chance to reset cooldowns by attacking or casting spells."
+		"DOTA_Tooltip_modifier_lion_unlock_potential_buff_lua_Description"						"This units has %dMODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE%%% damage, %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health regen, and %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% armor. There is a %dMODIFIER_PROPERTY_TOOLTIP%%% chance to reset cooldowns by attacking or casting spells."
 		//
 		//-------------------------------------------------------------------------------------
 		//
@@ -1036,12 +1115,14 @@
 		"DOTA_Tooltip_ability_drow_ranger_empowerment_lua_Lore"									""
 		// Death Shot
 		"DOTA_Tooltip_ability_drow_ranger_death_shot_lua"										"Death Shot"
-		"DOTA_Tooltip_ability_drow_ranger_death_shot_lua_Description"							"<h1>Passive: Death Shot</h1> Gives an %crit_chance%%% chance to do %agi_mult%x Agility as damage"
+		"DOTA_Tooltip_ability_drow_ranger_death_shot_lua_Description"							"<h1>Passive: Death Shot</h1> Gives an %crit_chance_day%%% chance during the day and a %crit_chance_night%%% chance during the night to do %agi_mult%x Agility as damage"
 		"DOTA_Tooltip_ability_drow_ranger_death_shot_lua_Lore"									""
 		//
 		//-------------------------------------------------------------------------------------
 		//
 		"npc_dota_hero_pudge"																	"Abomination"
+		"npc_dota_hero_pudge_npedesc1"															"Keep attacking with powerful yet self-harming spells that rely on lifesteal to survive. You are rewarded with more strength for kills"
+		"npc_dota_hero_pudge_bio"																"bio"
 		// Unholy Rage
 		"DOTA_Tooltip_ability_pudge_unholy_rage_lua"											"Unholy Rage"
 		"DOTA_Tooltip_ability_pudge_unholy_rage_lua_Description"								"Boul gets into a manic frenzy completely losing his mind, sticking his cleaver into everything he can, stealing their life essence."

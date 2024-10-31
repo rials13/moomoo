@@ -6,7 +6,7 @@ if CHoldoutGameRound == nil then
 	CHoldoutGameRound = class({})
 end
 
-_G.NEUTRAL_ITEMS_PER_ROUND = 2
+_G.NEUTRAL_ITEMS_PER_ROUND = 1
 
 function CHoldoutGameRound:GetNeutralItemTier()
 	if self._nRoundNumber < 4 then 
@@ -345,15 +345,18 @@ function CHoldoutGameRound:OnEntityKilled( event )
 		if self._nNeutralItemsLeft > 0 and self._nCoreUnitsTotal > 0 then 
 			local nPctChance = math.ceil( ( self._nCoreUnitsKilled / self._nCoreUnitsTotal ) * 100 ) 
 			local nNeutralItemTier = self:GetNeutralItemTier()
-			--print( "Looking to drop neutral item of tier " .. nNeutralItemTier .. " in round " .. self._nRoundNumber  )
+			print( "Looking to drop neutral item of tier " .. nNeutralItemTier .. " in round " .. self._nRoundNumber  )
 			if RollPercentage( nPctChance ) then 
+				local szNutralTokenName = "item_tier" .. nNeutralItemTier .. "_token"
+				print("neutral name " .. szNutralTokenName)
 				local szNeutralItemName = GetPotentialNeutralItemDrop( nNeutralItemTier, DOTA_TEAM_GOODGUYS )
 				if szNeutralItemName ~= nil then 
 					local hHeroToDrop = EntIndexToHScript( event.entindex_attacker or -1 )
 					if hHeroToDrop == nil then 
 						hHeroToDrop = heroes[ i ]
 					end
-					DropNeutralItemAtPositionForHero( szNeutralItemName, killedUnit:GetAbsOrigin(), hHeroToDrop, self:GetNeutralItemTier(), true )
+					--DropNeutralItemAtPositionForHero( szNeutralItemName, killedUnit:GetAbsOrigin(), hHeroToDrop, self:GetNeutralItemTier(), true )
+					DropNeutralItemAtPositionForHero( szNutralTokenName, killedUnit:GetAbsOrigin(), hHeroToDrop, self:GetNeutralItemTier(), true )
 					self._nNeutralItemsLeft = self._nNeutralItemsLeft - 1
 				end
 			end

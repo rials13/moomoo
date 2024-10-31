@@ -1,0 +1,71 @@
+"DOTAHeroes"
+{
+	// verified 7.33c Oct 30, 2024S
+    //=================================================================================================================
+	// HERO: Drow Ranger - Dark Ranger
+	//=================================================================================================================
+	"npc_dota_hero_drow_ranger_template"
+	{
+		"override_hero"				"npc_dota_hero_drow_ranger"					// Hero to override
+		"SimilarHeroes"				""
+		"Role"						"Carry"
+        "Rolelevels"                "3"
+        "Complexity"				"1"
+
+		// Abilities
+		// ------------------------------------------------------------------------------------------------------------
+		//"AbilityLayout"			""	//4, 5, 6 only
+		"Ability1"					"drow_ranger_accuracy_lua"					// Ability 1
+		"Ability2"					"drow_ranger_dark_arrow_lua"				// Ability 2
+		"Ability3"					"drow_ranger_trueshot_aura_lua"				// Ability 3
+		"Ability4"					"generic_hidden"
+		"Ability5"					"generic_hidden"
+		"Ability6"					"drow_ranger_empowerment_lua"				// Ability 6
+		"Ability7"					"drow_ranger_death_shot_lua"				// Ability 7
+		"Ability8"					"attribute_bonus_lua"
+
+		"AbilityTalentStart"		"10" //10
+		"Ability10"					"special_bonus_unique_generic_hidden0"
+		"Ability11"					"special_bonus_unique_generic_hidden1"
+		"Ability12"					"special_bonus_unique_generic_hidden2"
+		"Ability13"					"special_bonus_unique_generic_hidden3"
+		"Ability14"					"special_bonus_unique_generic_hidden4"
+		"Ability15"					"special_bonus_unique_generic_hidden5"
+		"Ability16"					"special_bonus_unique_generic_hidden6"
+		"Ability17"					"special_bonus_unique_generic_hidden7"
+		"Facets" 					""
+
+		// Armor
+		// ------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"-1.7"										// 2
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"BaseAttackSpeed"			"114"									// 12.5 second for 10 attacks
+		"AttackDamageMin"			"11"									// 33
+		"AttackDamageMax"			"22"									// 44
+		"AttackRange"				"600"									// Range within a target can be attacked.
+		
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"17"									// Base strength
+		"AttributeStrengthGain"		"1.9"									// Strength bonus per level. 50: 
+		"AttributeBaseAgility"		"22"									// Base agility
+		"AttributeAgilityGain"		"2.75"									// Agility bonus per level. 50: 
+        "AttributeBaseIntelligence"	"15"									// Base intelligence
+		"AttributeIntelligenceGain"	"1.4"									// Intelligence bonus per level. 50: 
+		
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementSpeed"               "300"       							// Speed
+		
+		// Health and Mana
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"                "99"       							// 473
+		"StatusMana"                  "60"         							// 240
+
+		"VisionNighttimeRange"		"1700"										// Range of vision at night time.
+        }
+}

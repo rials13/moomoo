@@ -10,6 +10,7 @@
 	"npc_dota_hero_lion"			"1" // Vassal
 	"npc_dota_hero_drow_ranger"		"1" // Dark Ranger
 	"npc_dota_hero_pudge"			"1"	// Abomination
+	//"npc_dota_hero_cannibal"				"1"
 }
 
 // update in addon_game_mode.lua GetAvailableHeroesForMap()

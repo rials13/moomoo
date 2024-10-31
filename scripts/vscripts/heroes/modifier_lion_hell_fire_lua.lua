@@ -18,7 +18,7 @@ end
 -- Initializations
 function modifier_lion_hell_fire_lua:OnCreated( kv )
 	-- load data
-	local damage = self:GetCaster():GetIntellect()
+	local damage = self:GetCaster():GetIntellect(false)
 	local spellLevel = self:GetAbility():GetLevel()
 	if spellLevel >= 2 then
 		damage = damage + self:GetCaster():GetAgility()
@@ -49,7 +49,7 @@ function modifier_lion_hell_fire_lua:OnCreated( kv )
 		self:OnIntervalThink()
 
 		-- play effects
-		self:PlayEffects1()
+		self:PlayEffects2()
 
 	end
 end
@@ -57,14 +57,14 @@ end
 function modifier_lion_hell_fire_lua:OnRemoved( kv )
 	if IsServer() then
 		self:StartIntervalThink( -1 )
-		self:StopEffects1()
+		self:StopEffects2()
 	end
 end
 
 function modifier_lion_hell_fire_lua:OnDestroy( kv )
 	if IsServer() then
 		self:StartIntervalThink( -1 )
-		self:StopEffects1()
+		self:StopEffects2()
 	end
 end
 
@@ -92,6 +92,8 @@ function modifier_lion_hell_fire_lua:OnIntervalThink()
 		end
 
 		-- Paly effects?
+		self:PlayEffects1()
+
 		print("thinking...")
 		-- increment wave
 		self.wave = self.wave + 1
@@ -104,7 +106,8 @@ end
 --------------------------------------------------------------------------------
 -- Effects
 function modifier_lion_hell_fire_lua:PlayEffects1()
-	local particle_cast = "particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_snow.vpcf"
+	--local particle_cast = "particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_snow.vpcf"
+	local particle_cast = "particles/econ/items/queen_of_pain/qop_2022_immortal/queen_2022_scream_of_pain_owner_firewave.vpcf"
 	self.sound_cast = "hero_Crystal.freezingField.wind"
 
 	-- Create Particle
@@ -119,11 +122,13 @@ function modifier_lion_hell_fire_lua:PlayEffects1()
 		false,
 		false
 	)
+end
 
+function modifier_lion_hell_fire_lua:PlayEffects2()
 	-- Play sound
 	EmitSoundOn( self.sound_cast, self:GetCaster() )
 end
 
-function modifier_lion_hell_fire_lua:StopEffects1()
+function modifier_lion_hell_fire_lua:StopEffects2()
 	StopSoundOn( self.sound_cast, self:GetCaster() )
 end

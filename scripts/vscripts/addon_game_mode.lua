@@ -201,7 +201,7 @@ function CHoldoutGameMode:InitGameMode()
 	
 	--GameRules:SetHeroRespawnEnabled( true ) -- allows respawn -- false see OnEntityKilled
 	GameRules:SetUseUniversalShopMode( false ) -- shop all shops for everyone
-	GameRules:SetHeroSelectionTime( 30.0 )
+	GameRules:SetHeroSelectionTime( 120.0 )
 	GameRules:SetStrategyTime( 0.0 )
 	GameRules:SetShowcaseTime( 0.0 )
 	GameRules:SetPreGameTime( 15.0 )
@@ -214,9 +214,10 @@ function CHoldoutGameMode:InitGameMode()
 	--GameRules:SetGoldPerTick( 1 ) -- 0
 	GameRules:SetSameHeroSelectionEnabled( true ) --multiple players can pick the same hero
 	GameRules:GetGameModeEntity():SetRemoveIllusionsOnDeath( true )
-	GameRules:GetGameModeEntity():SetDaynightCycleDisabled( true )
+	GameRules:GetGameModeEntity():SetDaynightCycleDisabled( false )
 	GameRules:GetGameModeEntity():SetCustomBuybackCostEnabled( true )
 	GameRules:SetStartingGold( STARTING_GOLD ) --added bt me for custom start gold
+	GameRules:SetTimeOfDay( 0.25 ) -- start game with normal day/night cycle
 	
 
 	-- For testing skip ahead to test hero
@@ -408,7 +409,7 @@ function CHoldoutGameMode:ForceAssignHeroes()
 end
 
 function CHoldoutGameMode:GetAvailableHeroesForMap()
-	if GetMapName() == "dark_moon" then 
+	if (GetMapName() == "classic") or (GetMapName() == "dark_moon") then 
 		local tDarkMoonHeroes =
 		{
 			--"npc_dota_hero_tusk",
@@ -431,6 +432,7 @@ function CHoldoutGameMode:GetAvailableHeroesForMap()
 			"npc_dota_hero_lion",
 			"npc_dota_hero_drow_ranger",
 			"npc_dota_hero_pudge",
+			--"npc_dota_hero_cannibal"
 		}
 		return tDarkMoonHeroes
 	end
@@ -466,7 +468,8 @@ function CHoldoutGameMode:OnThink()
 
 	if GameRules:IsDaytime() then
 		-- do this here because it doesn't work in Init
-		GameRules:SetTimeOfDay( 0.751 )
+		--GameRules:SetTimeOfDay( 0.751 )
+		
 	end
 
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_HERO_SELECTION then
@@ -515,12 +518,14 @@ function CHoldoutGameMode:_RoundFinished()
 
 	self._currentRound = nil
 
-	-- Heal all players
-	self:_RefreshPlayers()
-
-	-- Heal ancient
-	self._hAncient:SetHealth( self._hAncient:GetMaxHealth() )
-	--self._hAncient:SetInvulnCount( self.nAncientInvulnerabilityCount )
+	
+	if (GetMapName() == "dark_moon") then
+		-- Heal all players but not on classic
+		self:_RefreshPlayers()
+			-- Heal ancient
+		self._hAncient:SetHealth( self._hAncient:GetMaxHealth() )
+		--self._hAncient:SetInvulnCount( self.nAncientInvulnerabilityCount )
+	end
 
 	-- Respawn all buildings
 	self:_RespawnBuildings()

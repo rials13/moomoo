@@ -81,8 +81,8 @@ end]]
 -- Effects
 function lion_conjuration_lua:PlayEffects1()
 	-- Get Resources
-	--local particle_cast = "particles/units/heroes/hero_bristleback/bristleback_quill_spray.vpcf"
-    local particle_cast = "models/items/queenofpain/queenofpain_arcana/debut/particles/lava/lava_splash_ambient_b.vpcf"
+	local particle_cast = "particles/units/heroes/hero_bristleback/bristleback_quill_spray.vpcf"
+    --local particle_cast = "models/items/queenofpain/queenofpain_arcana/debut/particles/lava/lava_splash_ambient_b.vpcf"
 	local sound_cast = "Hero_Bristleback.QuillSpray.Cast"
 
 	-- Create Particle

@@ -18,7 +18,7 @@ function item_masktr_4:OnSpellStart()
 	local bDuration = self:GetSpecialValueFor("duration")
 
     -- set cooldown
-    self:UseResources( false, false, true ) 
+    self:UseResources( true, false, false, true ) 
 
 	-- Add modifier
 	caster:AddNewModifier(

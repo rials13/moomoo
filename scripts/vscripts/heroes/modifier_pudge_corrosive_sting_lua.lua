@@ -55,20 +55,20 @@ function modifier_pudge_corrosive_sting_lua:GetModifierProcAttack_Feedback( para
 	if self.caster:PassivesDisabled() then return end
 
 	local filter = UnitFilter(
-		params.target,
-		self.abilityTargetTeam,
-		self.abilityTargetType,
-		self.abilityTargetFlags,
-		self.team
+		params.target, -- npc 
+		self.abilityTargetTeam, -- team 
+		self.abilityTargetType, -- type 
+		self.abilityTargetFlags, -- flag
+		self.team -- team
 	)
 	if not filter==UF_SUCCESS then return end
 		
 	-- Apply debuff to enemy
 		params.target:AddNewModifier(
 			self.caster, -- player source
-		self.ability, -- ability source
-		"modifier_pudge_corrosive_sting_lua_debuff", -- modifier name
-		{ duration = self.duration } -- kv
+			self.ability, -- ability source
+			"modifier_pudge_corrosive_sting_lua_debuff", -- modifier name
+			{ duration = self.duration } -- kv
 		)
 
 		-- Play effects

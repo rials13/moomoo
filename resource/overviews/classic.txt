@@ -1,0 +1,8 @@
+classic
+{
+	material materials/overviews/classic.vmat
+	pos_x -3584
+	pos_y 3072
+	scale 7.500
+}
+

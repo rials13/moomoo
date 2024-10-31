@@ -1,0 +1,72 @@
+"DOTAHeroes"
+{
+    // verified 7.33c Oct 30, 2024S
+    //=================================================================================================================
+	// HERO: Razor - Biohazard
+	//=================================================================================================================
+	"npc_dota_hero_razor_template"
+	{
+		"override_hero"				"npc_dota_hero_razor"					// Hero to override
+        "SimilarHeroes"				""
+		"Role"						"Carry"
+		"Rolelevels"				"3"
+		"Complexity"				"1"
+
+
+		// Abilities
+		// ------------------------------------------------------------------------------------------------------------
+		//"AbilityLayout"			"6"
+		"Ability1"					"razor_bryans_breath_lua"				// Ability 1
+		"Ability2"					"razor_jovans_touch_lua"				// Ability 2
+		"Ability3"					"razor_ronels_skin_lua"				// Ability 3
+		"Ability4"					"generic_hidden"
+		"Ability5"					"generic_hidden"
+		"Ability6"					"razor_tiny_treb_lua"					// Ability 6
+		"Ability7"					"razor_troys_strength_lua"					// Ability 7
+		"Ability8"					"attribute_bonus_lua"
+
+		"AbilityTalentStart"		"10" //10
+		"Ability10"					"special_bonus_unique_generic_hidden0"
+		"Ability11"					"special_bonus_unique_generic_hidden1"
+		"Ability12"					"special_bonus_unique_generic_hidden2"
+		"Ability13"					"special_bonus_unique_generic_hidden3"
+		"Ability14"					"special_bonus_unique_generic_hidden4"
+		"Ability15"					"special_bonus_unique_generic_hidden5"
+		"Ability16"					"special_bonus_unique_generic_hidden6"
+		"Ability17"					"special_bonus_unique_generic_hidden7"
+		"Facets" 					""
+
+		// Armor
+		// ------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"-1.7"										// 2.0
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"BaseAttackSpeed"			"84"
+		"AttackDamageMin"			"15"									// 37
+		"AttackDamageMax"			"17"									// 39	
+		//"AttackRate"				"1.7"									// Speed of attack. 16 seconds for 10 attacks
+		"AttackRange"				"550"									// Range within a target can be attacked.
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"17"									// Base strength
+		"AttributeStrengthGain"		"1.9"									// Strength bonus per level. 50: 83
+		"AttributeBaseAgility"		"22"									// Base agility
+		"AttributeAgilityGain"		"2.5"									// Agility bonus per level. 50: 224
+        "AttributeBaseIntelligence"	"14"									// Base intelligence
+		"AttributeIntelligenceGain"	"1.8"									// Intelligence bonus per level. 50: 88
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementSpeed"               "295"       							// Speed
+
+		// Health and Mana
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"                "99"       							// 473
+		"StatusMana"                  "56"         							// 224
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+}

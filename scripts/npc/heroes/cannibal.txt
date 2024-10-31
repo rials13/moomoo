@@ -1,0 +1,74 @@
+"DOTAHeroes"
+{
+	// verified 7.33c Oct 30, 2024S
+    //=================================================================================================================
+	// HERO: Life Stealer - Cannibal
+	//=================================================================================================================
+	"npc_dota_hero_life_stealer_template"
+	{
+		"override_hero"				"npc_dota_hero_life_stealer"				// Hero to override
+		"ModelScale"				"0.6"
+		"SimilarHeroes"				""
+		"Role"						"Carry,Durable"
+		"Rolelevels"	"1,1"
+		"Complexity"	"1"
+
+		// Abilities
+		// ------------------------------------------------------------------------------------------------------------
+		"AbilityLayout"				"6" // 4, 5, 6
+		"Ability1"					"life_stealer_cannibalize_lua"				// Ability 1
+		"Ability2"					"life_stealer_rend_lua"						// Ability 2
+		"Ability3"					"life_stealer_ghoul_frenzy_lua"				// Ability 3
+		"Ability4"					"generic_hidden"
+		"Ability5"					"generic_hidden"
+		"Ability6"					"life_stealer_mammoth_lua"					// Ability 6
+		"Ability7"					"life_stealer_stench_lua"					// Ability 7
+		"Ability8"                  "attribute_bonus_lua"
+
+		"AbilityTalentStart"		"10" //10
+		"Ability10"					"special_bonus_unique_generic_hidden0"
+		"Ability11"					"special_bonus_unique_generic_hidden1"
+		"Ability12"					"special_bonus_unique_generic_hidden2"
+		"Ability13"					"special_bonus_unique_generic_hidden3"
+		"Ability14"					"special_bonus_unique_generic_hidden4"
+		"Ability15"					"special_bonus_unique_generic_hidden5"
+		"Ability16"					"special_bonus_unique_generic_hidden6"
+		"Ability17"					"special_bonus_unique_generic_hidden7"
+		"Facets" 					""
+	
+
+		// Armor
+		// ------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"				"-1.3"	// 3.0
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"BaseAttackSpeed"			"110"
+		"AttackDamageMin"			"24"									// 39 
+		"AttackDamageMax"			"34"									// 49	
+		//"AttackRate"				"1.7"1.8 now for most heroes?			// Speed of attack. 12.5 seconds for 10 attacks
+		"AttackRange"				"100"									// Range within a target can be attacked.
+		
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"15"									// Base strength
+		"AttributeStrengthGain"		"1.4"									// Strength bonus per level. 50: 83
+		"AttributeBaseAgility"		"26"									// Base agility
+		"AttributeAgilityGain"		"3.05"									// Agility bonus per level. 50: 224
+		"AttributeBaseIntelligence"	"15"									// Base intelligence
+		"AttributeIntelligenceGain"	"1.5"									// Intelligence bonus per level. 50: 88
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementSpeed"               "295"       							// Speed
+		
+		// Health and Mana
+		//-------------------------------------------------------------------------------------------------------------
+		"StatusHealth"                "105"       							// 435
+		"StatusMana"                  "60"         							// 240
+		
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+}
