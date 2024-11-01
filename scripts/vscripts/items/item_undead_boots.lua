@@ -23,7 +23,7 @@ function item_undead_boots:OnSpellStart()
     ProjectileManager:ProjectileDodge(caster)
 
 	-- teleport
-	FindClearSpaceForUnit( caster, origin + direction, true )
+	FindClearSpaceForUnit( caster, point , false )
 
 	-- Play effects
     self:PlayEffects( origin, direction )

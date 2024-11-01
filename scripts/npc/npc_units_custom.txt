@@ -567,9 +567,9 @@
 		// Abilities
 		//----------------------------------------------------------------
 		
-		"Ability1"					"moo_crown_lua"
-		"Ability2"					"moo_regen_lua"
-		"Ability3"					"moo_healing_lua"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
 		"Ability4"					""
 		"Ability5"					""
 		"Ability6"					""

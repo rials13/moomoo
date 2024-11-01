@@ -21,14 +21,14 @@ function item_wirts:OnSpellStart()
 	-- determine target position
 	local direction = (point - origin)
 	if direction:Length2D() > range then
-		direction = direction:Normalized() * over_range
+		point = origin + direction:Normalized() * over_range
 	end
 
     --We disjoint disjointable incoming projectiles.
     ProjectileManager:ProjectileDodge(caster)
 
 	-- teleport
-	FindClearSpaceForUnit( caster, origin + direction, true )
+	FindClearSpaceForUnit( caster, point, false )
 
 	-- Play effects
     self:PlayEffects( origin, direction )

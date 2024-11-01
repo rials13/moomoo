@@ -264,39 +264,141 @@
 		"DOTA_Chat_Tombstone_Pinged"										"Fallen teammate here."
 
 		// CUSTOM ITEMS BEGIN
+		//
+		//
+		// Tinerk Shop
+		"DOTA_Tooltip_ability_item_hastarium"									"Hastarium"
+		"DOTA_Tooltip_ability_item_hastarium_Lore"								""
+		"DOTA_Tooltip_ability_item_hastarium_attack_speed"						"+$attack"
+		"DOTA_Tooltip_ability_item_hastarium_damage"							"+$damage"
+
+		"DOTA_Tooltip_ability_item_javelin_moo"									"Javelin"
+		"DOTA_Tooltip_ability_item_javelin_moo_Lore"								""
+		"DOTA_Tooltip_ability_item_javelin_moo_damage"								"+$damage"
+		"DOTA_Tooltip_ability_item_javelin_moo_damage_pct"							"+% damage to ranged heroes"
+		//"DOTA_Tooltip_ability_item_javelin_moo_radius"							"radius"
+		"DOTA_Tooltip_item_javelin_moo_aura"									"Javelin Aura"
+		"DOTA_Tooltip_item_javelin_moo_aura_Description"						"Receiving %dMODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE%%% damage increase (outgoing damage)"
+
+		"DOTA_Tooltip_ability_item_saviors_claw"									"Savior's Claw"
+		"DOTA_Tooltip_ability_item_saviors_claw_Lore"								""
+		"DOTA_Tooltip_ability_item_saviors_claw_damage"								"+$damage"
+
+		"DOTA_Tooltip_ability_item_warhammer_moo"									"Warhammer"
+		"DOTA_Tooltip_ability_item_warhammer_moo_Lore"								"It's Hammer Time!"
+		"DOTA_Tooltip_ability_item_warhammer_moo_damage"								"+$damage"
+
+		"DOTA_Tooltip_ability_item_imperial_axe"									"Imperial Axe"
+		"DOTA_Tooltip_ability_item_imperial_axe_Lore"								"The ancient relic of the orce is said to hold the power to call the spirits of all orcs"
+		"DOTA_Tooltip_ability_item_imperial_axe_damage"								"+$damage"
+		"DOTA_Tooltip_ability_item_imperial_axe_hp_regen"								"+$hp_regen"
+
+		"DOTA_Tooltip_ability_item_swordstaff"									"Swordstaff"
+		"DOTA_Tooltip_ability_item_swordstaff_Lore"								""
+		"DOTA_Tooltip_ability_item_swordstaff_damage"								"+$damage"
+
+		"DOTA_Tooltip_ability_item_coral_blades"									"Coral Blades"
+		"DOTA_Tooltip_ability_item_coral_blades_Lore"								""
+		"DOTA_Tooltip_ability_item_coral_blades_damage"								"+$damage"
+
+		"DOTA_Tooltip_ability_item_red_boots"									"Red Boots"
+		"DOTA_Tooltip_ability_item_red_boots_Description"						"Movement speed bonuses from multiple pairs of boots do not stack."
+		"DOTA_Tooltip_ability_item_red_boots_Lore"								""
+		"DOTA_Tooltip_ability_item_red_boots_movement_speed"					"+$move_speed"
+
 		"DOTA_Tooltip_ability_item_ruthless_gauntlet"								"Ruthless Gauntlet"
 		"DOTA_Tooltip_ability_item_ruthless_gauntlet_Lore"							""
-		"DOTA_Tooltip_ability_item_ruthless_gauntlet_attack_speed"					"+ Attack Speed"
-		
+		"DOTA_Tooltip_ability_item_ruthless_gauntlet_attack_speed"					"+$attack"
+
+		"DOTA_Tooltip_ability_item_sapphire_ring"								"Sapphire Ring"
+		"DOTA_Tooltip_ability_item_sapphire_ring_Lore"							""
+		"DOTA_Tooltip_ability_item_sapphire_ring_hp_regen"					"+$hp_regen"
+
+		"DOTA_Tooltip_ability_item_heroism_mask"								"Heroism Mask"
+		"DOTA_Tooltip_ability_item_heroism_mask_Lore"							""
+		"DOTA_Tooltip_ability_item_heroism_mask_tooltip_pct"					"+% total mana regen"
+
+		// Magni shop
+		"DOTA_Tooltip_ability_item_leremias"									"Leremias"
+		"DOTA_Tooltip_ability_item_leremias_Lore"								""
+		"DOTA_Tooltip_ability_item_leremias_armor"								"+$armor"
+		"DOTA_Tooltip_ability_item_leremias_enemy_armor"							"- armor to enemy units"
+		"DOTA_Tooltip_item_leremias_aura"									"Leremias Aura"
+		"DOTA_Tooltip_item_leremias_aura_Description"						"Receiving %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% armor reduction"
+
+		"DOTA_Tooltip_ability_item_hood_of_cunning"								"Hood Of Cunning"
+		"DOTA_Tooltip_ability_item_hood_of_cunning_Lore"							""
+		"DOTA_Tooltip_ability_item_hood_of_cunning_evasion"					"%+$evasion"
+
+		"DOTA_Tooltip_ability_item_villainous_shield"								"Villainous Shield"
+		"DOTA_Tooltip_ability_item_villainous_shield_Lore"							""
+		"DOTA_Tooltip_ability_item_villainous_shield_armor"					"+$armor"
+		"DOTA_Tooltip_ability_item_villainous_shield_health"					"+$health"
+
+		"DOTA_Tooltip_ability_item_helm_of_king"									"Helm Of King"
+		"DOTA_Tooltip_ability_item_helm_of_king_Lore"								"The helmet of a legendary warrior who fell in battle"
+		"DOTA_Tooltip_ability_item_helm_of_king_armor"								"+$armor"
+		"DOTA_Tooltip_ability_item_helm_of_king_hp_regen"							"+$hp_regen"
+
+		"DOTA_Tooltip_ability_item_breast_plate"									"Breast Plate"
+		"DOTA_Tooltip_ability_item_breast_plate_Lore"								""
+		"DOTA_Tooltip_ability_item_breast_plate_armor"								"+$armor"
+
 		"DOTA_Tooltip_ability_item_mithril_shirt"									"Mithril Shirt"
 		"DOTA_Tooltip_ability_item_mithril_shirt_Lore"								"A shirt of mail forged from mithril given by Thorin Oakenshield to Bilbo Baggins"
-		"DOTA_Tooltip_ability_item_mithril_shirt_armor"								"+ Armor"
+		"DOTA_Tooltip_ability_item_mithril_shirt_armor"								"+$armor"
+
+		"DOTA_Tooltip_ability_item_celestial_ring"									"Celestial Ring"
+		"DOTA_Tooltip_ability_item_celestial_ring_Lore"								""
+		"DOTA_Tooltip_ability_item_celestial_ring_armor"							"+$armor"
 
 		"DOTA_Tooltip_ability_item_studded_leather"									"Studded Leather"
 		"DOTA_Tooltip_ability_item_studded_leather_Lore"							""
-		"DOTA_Tooltip_ability_item_studded_leather_attack_speed"					"+ Attack Speed"
-		"DOTA_Tooltip_ability_item_studded_leather_armor"							"+ Armor"
+		"DOTA_Tooltip_ability_item_studded_leather_attack_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_studded_leather_armor"							"+$armor"
 
+		"DOTA_Tooltip_ability_item_elunes_cloak"									"Elune's Cloak"
+		"DOTA_Tooltip_ability_item_elunes_cloak_Lore"								""
+		"DOTA_Tooltip_ability_item_elunes_cloak_spell_resist"						"+$spell_resist"
+
+		"DOTA_Tooltip_ability_item_sefer_buckler"									"Sefer Buckler"
+		"DOTA_Tooltip_ability_item_sefer_buckler_Lore"								""
+		"DOTA_Tooltip_ability_item_sefer_buckler_Description"						"Grants a %damage_block_pct%%% chance to block %damage_block% damage from incoming attacks."
+		"DOTA_Tooltip_ability_item_sefer_buckler_spell_resist"						"+$spell_resist"
+
+		"DOTA_Tooltip_ability_item_helm_of_hador"									"Helm Of Hador"
+		"DOTA_Tooltip_ability_item_helm_of_hador_Lore"								""
+		"DOTA_Tooltip_ability_item_helm_of_hador_Description"						"Heals the attacker for %lifesteal_pct%%% of attack damage dealt"
+		"DOTA_Tooltip_ability_item_helm_of_hador_lifesteal_pct"						""
+
+		"DOTA_Tooltip_ability_item_dagger_of_escape"									"Dagger of Escape"
+		"DOTA_Tooltip_ability_item_dagger_of_escape_Lore"								""
+		"DOTA_Tooltip_ability_item_dagger_of_escape_Description"						"<h1>Active: Blink</h1>Teleport to a target point up to %range% units away"
+		"DOTA_Tooltip_ability_item_dagger_of_escape_Note0"								"Unlike Blink, taking damage does not disable"
+
+		// Mage Shop
+		
+		// Overlord Shop
 		"DOTA_Tooltip_ability_item_orb_of_fire"										"Orb of Fire"
 		"DOTA_Tooltip_ability_item_orb_of_fire_Lore"								"Unknown power"
 		"DOTA_Tooltip_ability_item_orb_of_fire_bonus_all_stats"						"+$all"
 
 		"DOTA_Tooltip_ability_item_orb_of_frost"									"Orb of Frost"
 		"DOTA_Tooltip_ability_item_orb_of_frost_Lore"								"Unknown potential"
-		"DOTA_Tooltip_ability_item_orb_of_frost_all_stats"							"+ All Stats"
+		"DOTA_Tooltip_ability_item_orb_of_frost_all_stats"							"+$all"
 
 		"DOTA_Tooltip_ability_item_orb_of_darkness"									"Orb of Darkness"
 		"DOTA_Tooltip_ability_item_orb_of_darkness_Lore"							"Unknown competency"
-		"DOTA_Tooltip_ability_item_orb_of_darkness_all_stats"						"+ All Stats"
+		"DOTA_Tooltip_ability_item_orb_of_darkness_all_stats"						"+$all"
 
 		"DOTA_Tooltip_ability_item_orb_of_lightning"								"Orb of Lightning"
 		"DOTA_Tooltip_ability_item_orb_of_lightning_Lore"							"Unknown influence"
-		"DOTA_Tooltip_ability_item_orb_of_lightning_all_stats"						"+ All Stats"
+		"DOTA_Tooltip_ability_item_orb_of_lightning_all_stats"						"+$all"
 
 		"DOTA_Tooltip_ability_item_omniscience"								"Omniscience"
 		"DOTA_Tooltip_ability_item_omniscience_Lore"						""
-		"DOTA_Tooltip_ability_item_omniscience_hp_regen"					"+ HP Regen"
-		"DOTA_Tooltip_ability_item_omniscience_mana_regen_bonus"			"+ Mana Regen"
+		"DOTA_Tooltip_ability_item_omniscience_hp_regen"					"+$hp_regen"
+		"DOTA_Tooltip_ability_item_omniscience_mana_regen_bonus"			"+$mana_regen"
 
         "DOTA_Tooltip_ability_item_pendant_of_flesh"						"Pendant Of Flesh"
 		"DOTA_Tooltip_ability_item_pendant_of_flesh_Lore"				    ""

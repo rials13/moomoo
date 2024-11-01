@@ -74,6 +74,8 @@ function Precache( context )
 	PrecacheResource( "particle_folder", "particles/units/heroes/hero_morphling", context )
 
 	-- Round 5: Bonus
+	PrecacheResource( "model", "models/heroes/pudge/righthook.vmdl", context )
+	PrecacheResource( "particle_folder", "particles/units/heroes/hero_pudge", context )
 
 	-- Round 6
 	PrecacheResource( "particle_folder", "particles/units/heroes/hero_warlock", context )
@@ -184,6 +186,14 @@ function CHoldoutGameMode:InitGameMode()
 	self._hAncient = Entities:FindByName( nil, "dota_goodguys_fort" )
 	if not self._hAncient then
 		print( "Ancient entity not found!" )
+	end
+	if (GetMapName() == "classic") then
+		local mooAbilities = {"moo_crown_lua","moo_regen_lua","moo_healing_lua"}
+		print("adding abilities to Moo Moo:")
+		for _,mAbility in pairs(mooAbilities) do
+			self._hAncient:AddAbility(mAbility):SetLevel(1)
+			print("added ability " .. mAbility)
+		end
 	end
 
 	GameRules:SetCustomGameSetupTimeout( 0 ) 
